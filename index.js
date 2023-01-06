@@ -19,7 +19,7 @@ const wait = (stream) => {
 }
 
 const pullImage = (cmdImg) => {
-  return docker.createImage({ fromImage: cmdImg })
+  return docker.createImage({ fromImage: cmdImg.split(':')[1] ? cmdImg : `${cmdImg}:latest` })
 }
 
 const run = async (imgCmd, cmdArgs) => {
