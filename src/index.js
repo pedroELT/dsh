@@ -38,7 +38,7 @@ const run = async (imgCmd, cmdArgs) => {
 }
 
 const configure = () => {
-  writeFileSync(__dirname + '/configuration.json', edit(readFileSync(__dirname + '/configuration.json').toString()));
+  writeFileSync(homedir() + '/.dsh.json', edit(readFileSync(homedir() + '/.dsh.json').toString()));
 }
 
 const search = async (img) => {
