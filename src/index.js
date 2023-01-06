@@ -6,7 +6,7 @@ const { writeFileSync, readFileSync } = require('fs')
 
 const docker = new Dockerode({ socketPath: '/var/run/docker.sock' })
 
-const conf = require('./configuration.json')
+const conf = require('../configuration.json')
 
 const debug = process.env.DSH_DEBUG
 
