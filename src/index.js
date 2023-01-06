@@ -72,6 +72,9 @@ const search = async (img) => {
     case 'search': 
       await search(cmd[0])
       break;
+    case 'update':
+      require(__dirname + '/download')
+      break;
     default: 
       if (conf.images[cmdImg]) {
         cmd.unshift(cmdImg)

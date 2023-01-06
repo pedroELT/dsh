@@ -6,8 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "preinstall": "docker -v || exit_on_error 'please install docker'",
-    "start": "node index.js",
-    "postinstall": "node src/download.js https://github.com/pedroELT/dsh/raw/main/toDownload.json"
+    "start": "node src/index.js",
+    "postinstall": "node src/download.js"
   },
   "author": "",
   "license": "ISC",

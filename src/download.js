@@ -10,7 +10,7 @@ const got = require('got');
   } catch (err) {
 
   }
-  const downloaded = await got(process.argv[2]).json()
+  const downloaded = await got("https://github.com/pedroELT/dsh/raw/main/toDownload.json").json()
   if (actual) {
     downloaded.blacklistEnv = [...new Set([...actual.blacklistEnv, ...downloaded.blacklistEnv])]
     downloaded.volumes = actual.volumes
