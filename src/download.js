@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 const { writeFileSync, readFileSync } = require('fs');
+const { homedir } = require('os')
 const got = require('got');
 
 (async () => {
   let actual
   try {
-    actual = JSON.parse(readFileSync(__dirname + '/../configuration.json').toString())
+    actual = JSON.parse(readFileSync(homedir() + '/.dsh.json').toString())
   } catch (err) {
 
   }
@@ -15,5 +16,5 @@ const got = require('got');
     downloaded.volumes = actual.volumes
     downloaded.images = { ...actual.images, ...downloaded.images }
   }
-  writeFileSync(__dirname + '/../configuration.json', JSON.stringify(downloaded, null, 4));
+  writeFileSync(homedir() + '/.dsh.json', JSON.stringify(downloaded, null, 4));
 })()

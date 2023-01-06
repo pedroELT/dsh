@@ -7,7 +7,7 @@
   "scripts": {
     "preinstall": "docker -v || exit_on_error 'please install docker'",
     "start": "node index.js",
-    "postinstall": "sudo node src/download.js https://github.com/pedroELT/dsh/raw/main/toDownload.json"
+    "postinstall": "node src/download.js https://github.com/pedroELT/dsh/raw/main/toDownload.json"
   },
   "author": "",
   "license": "ISC",

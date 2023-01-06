@@ -2,11 +2,12 @@
 const Dockerode = require('dockerode');
 const { edit } = require('external-editor')
 const { writeFileSync, readFileSync } = require('fs')
+const { homedir } = require('os')
 
 
 const docker = new Dockerode({ socketPath: '/var/run/docker.sock' })
 
-const conf = require('../configuration.json')
+const conf = require(homedir() + '/.dsh.json')
 
 const debug = process.env.DSH_DEBUG
 
