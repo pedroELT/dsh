@@ -81,6 +81,7 @@ const update = async () => {
       console.log('Example:', 'dsh alpine ls .')
       console.log('Example:', 'dsh ls .')
       console.log('Configure:', 'dsh configure')
+      console.log('Update configuration:', 'dsh update')
       console.log('Search for images:', 'dsh search <image_word>')
       break;
     case 'configure': 
