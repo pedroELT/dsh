@@ -3,7 +3,7 @@ const { writeFileSync, readFileSync } = require('fs');
 (async () => {
   let actual
   try {
-    actual = JSON.parse(readFileSync(__dirname + '/configuration.json').toString())
+    actual = JSON.parse(readFileSync(__dirname + '/../configuration.json').toString())
   } catch (err) {
 
   }
@@ -14,5 +14,5 @@ const { writeFileSync, readFileSync } = require('fs');
     downloaded.volumes = actual.volumes
     downloaded.images = { ...actual.images, ...downloaded.images }
   }
-  writeFileSync(__dirname + '/configuration.json', JSON.stringify(downloaded, null, 4));
+  writeFileSync(__dirname + '/../configuration.json', JSON.stringify(downloaded, null, 4));
 })()
