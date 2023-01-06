@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 const { writeFileSync, readFileSync } = require('fs');
+const got = require('got');
+
 (async () => {
   let actual
   try {
@@ -7,8 +9,7 @@ const { writeFileSync, readFileSync } = require('fs');
   } catch (err) {
 
   }
-  const downloadedResp = await fetch(process.argv[2])
-  const downloaded = await downloadedResp.json()
+  const downloaded = await got(process.argv[2]).json()
   if (actual) {
     downloaded.blacklistEnv = [...new Set([...actual.blacklistEnv, ...downloaded.blacklistEnv])]
     downloaded.volumes = actual.volumes
