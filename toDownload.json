@@ -1,0 +1,36 @@
+{
+  "blacklistEnv": [
+    "PATH",
+    "SESSION_MANAGER",
+    "NODE",
+    "XDG",
+    "XAUTHORITY",
+    "DBUS",
+    "LOGNAME",
+    "USER",
+    "HOME",
+    "npm",
+    "NVM",
+    "GDM",
+    "LESS",
+    "DISPLAY",
+    "GDK",
+    "PWD",
+    "ZSH",
+    "LANG",
+    "COLORTERM",
+    "HOSTNAME",
+    "PDHOST",
+    "SSH",
+    "GIT_ASKPASS",
+    "VSCODE",
+    "AWS",
+    "TOTO"
+  ],
+  "images": {
+    "sls": "amaysim/serverless:latest",
+    "curl": "curlimages/curl:latest",
+    "wget": "mwendler/wget:latest",
+    "git": "bitnami/git:latest"
+  }
+}
