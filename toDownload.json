@@ -28,7 +28,7 @@
     "TOTO"
   ],
   "images": {
-    "sls": "amaysim/serverless:latest",
+    "sls": "amaysim/serverless:3.23.0",
     "curl": "curlimages/curl:latest",
     "wget": "mwendler/wget:latest",
     "git": "bitnami/git:latest"
